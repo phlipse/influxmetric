@@ -14,17 +14,17 @@ func ExampleMetric() {
 
 	m.TagSet = make(map[string]string)
 	m.TagSet["country"] = " DE "
-	//m.TagSet["ci ty"] = "Würzburg"
+	m.TagSet["ci ty"] = "Würzburg"
 
 	m.FieldSet = make(map[string]interface{})
 	m.FieldSet[" temp"] = 10
-	//m.FieldSet["hum"] = 48.2
+	m.FieldSet["hum"] = 48.2
 	
 	//m.UnixTime = time.Now().UnixNano()
 
 	fmt.Println(m)
 	// Output:
-	// W_e_tt_er,country=DE temp=10i
+	// \ W"e\,tt=e\ r\ ,country=\ DE\ ,ci\ ty=Würzburg \ temp=10i,hum=48.20
 }
 
 func ExampleExtractValue() {
